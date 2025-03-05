@@ -1,0 +1,26 @@
+When working with a Priority Encoder, keep these key points in mind:
+
+1. Concept of Priority
+Unlike a standard encoder, a priority encoder gives precedence to the highest-order active input.
+If multiple inputs are high (1), the output corresponds to the highest-priority input.
+
+2. Truth Table & Logic Design
+Define a truth table that prioritizes the highest-order active bit.
+Use Boolean expressions or K-map simplification for logic minimization.
+
+3. Handling Invalid Inputs
+If no input is active, the output should be all zeros or generate an error flag.
+Ensure proper handling of unexpected cases to avoid incorrect outputs.
+
+4. Implementation in Verilog
+Use case, if-else, or priority statements to implement the logic.
+Avoid combinational loops that could lead to incorrect behavior.
+
+5. Common Applications
+Interrupt controllers (CPU prioritizes the most urgent interrupt).
+Data encoders (used in digital systems to compress multiple inputs into fewer bits).
+Multiplexer address decoding in complex circuits.
+
+6. Glitches & Timing Considerations
+Ensure proper gate delay balancing to prevent glitches in output.
+In sequential designs, synchronize the encoder with a clock signal to avoid meta-stability issues.
